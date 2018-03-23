@@ -60,12 +60,10 @@ bot.onStartChattingMessage((message) => {
 
 bot.onTextMessage((message) => {
     // message format from https://dev.kik.com/#/docs/messaging#receiving-messages
-    console.log("chatId " + message.chatId);
-    console.log("from " + message.from);
+    
 
     let chatId = message.chatId;
     let messageText = message.body;
-    console.log(messageText);
     
     if (messageText) {
         if (!sessionIds.has(chatId)) {
@@ -82,6 +80,13 @@ bot.onTextMessage((message) => {
                 let responseText = response.result.fulfillment.speech;
                 let responseData = response.result.fulfillment.data;
                 let action = response.result.action;
+                console.log("chatId " + message.chatId);
+                console.log("from " + message.from);
+                console.log("requete: " + messageText);
+                console.log("data : " + responseData);
+                console.log("text : " + responseText);
+                console.log("action : " + action);
+              
 
                 if (isDefined(responseData) && isDefined(responseData.kik)) {
                     try {
