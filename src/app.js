@@ -86,6 +86,8 @@ bot.onTextMessage((message) => {
                 console.log("data : " + responseData);
                 console.log("text : " + responseText);
                 console.log("action : " + action);
+                console.log(response);
+                
               
 
                 if (isDefined(responseData) && isDefined(responseData.kik)) {
