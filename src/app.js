@@ -51,6 +51,13 @@ function isDefined(obj) {
 
 bot.updateBotConfiguration();
 
+bot.onStartChattingMessage((message) => {
+    bot.getUserProfile(message.from)
+        .then((user) => {
+            message.reply(`Hey ${user.firstName}!`);
+        });
+});
+
 bot.onTextMessage((message) => {
     // message format from https://dev.kik.com/#/docs/messaging#receiving-messages
     console.log("chatId " + message.chatId);
