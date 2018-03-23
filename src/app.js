@@ -65,6 +65,7 @@ bot.onTextMessage((message) => {
 
     let chatId = message.chatId;
     let messageText = message.body;
+    console.log(messageText);
     
     if (messageText) {
         if (!sessionIds.has(chatId)) {
