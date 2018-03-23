@@ -32,7 +32,7 @@ const apiAiService = apiai(APIAI_ACCESS_TOKEN, {language: APIAI_LANG, requestSou
 const sessionIds = new Map();
 
 let bot = new Bot({
-    username: 'apiai.bot',
+    username: 'romano.bot',
     apiKey: KIK_API_KEY,
     baseUrl: SERVICE_URL
 });
