@@ -12,6 +12,7 @@
   "dependencies": {
     "@kikinteractive/kik": "^2.0.2",
     "apiai": "^2.0.0",
+    "axios": "^0.18.0",
     "body-parser": "^1.15.0",
     "html-entities": "^1.2.0",
     "node-uuid": "^1.4.7",

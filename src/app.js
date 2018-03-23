@@ -21,6 +21,7 @@ const Bot  = require('@kikinteractive/kik');
 const uuid = require('node-uuid');
 const request = require('request');
 const http = require('http');
+const axios = require('axios');
 
 const REST_PORT = (process.env.PORT || 5000);
 const APIAI_ACCESS_TOKEN = "dab09ae93f0d4d72bf253ef3792798f8";
