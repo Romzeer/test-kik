@@ -55,6 +55,7 @@ bot.updateBotConfiguration();
 bot.onStartChattingMessage((message) => {
     bot.getUserProfile(message.from)
         .then((user) => {
+            console.log(user);
             message.reply(`Hey ${user.firstName}!`);
         });
 });
