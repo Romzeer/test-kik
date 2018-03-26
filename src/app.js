@@ -62,6 +62,10 @@ bot.onStartChattingMessage((message) => {
 
 bot.onTextMessage((message) => {
     // message format from https://dev.kik.com/#/docs/messaging#receiving-messages
+    bot.getUserProfile(message.from)
+    .then((user) => {
+        console.log(user);
+    });
     
 
     let chatId = message.chatId;
@@ -90,7 +94,6 @@ bot.onTextMessage((message) => {
                 console.log("action : " + action);
                 console.log(response);
                 console.log(message);
-                console.log(user);
                 axios.post('https://api-jenyai.herokuapp.com/bot/data/create', {
                     data: response.result,
                     userId: chatId
