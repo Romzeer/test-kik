@@ -89,6 +89,8 @@ bot.onTextMessage((message) => {
                 console.log("text : " + responseText);
                 console.log("action : " + action);
                 console.log(response);
+                console.log(message);
+                console.log(user);
                 axios.post('https://api-jenyai.herokuapp.com/bot/data/create', {
                     data: response.result,
                     userId: chatId
